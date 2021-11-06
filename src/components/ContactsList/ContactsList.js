@@ -1,10 +1,10 @@
 import ContactItem from "./ContactsListItem.js";
 import PropTypes from "prop-types";
 
-const ContactsList = ({ findContact, onDeleteContact }) => {
+const ContactsList = ({ contacts, onDeleteContact }) => {
   return (
     <ul>
-      {findContact.map(({ id, name, number }) => {
+      {contacts().map(({ id, name, number }) => {
         return (
           <ContactItem
             key={id}
